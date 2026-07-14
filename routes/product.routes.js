@@ -17,7 +17,7 @@ const router = express.Router();
 
 
 // Ahamefula Chibundu - GET /products
-
+router.get('/products', getProducts);
 
 // Precious Uloh - GET  /products/:id
 
