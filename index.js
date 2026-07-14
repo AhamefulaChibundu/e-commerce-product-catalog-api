@@ -24,11 +24,11 @@ connectDB();
 // Before pushing your code, comment it again so you
 // don't overwrite another member's changes.
 
-//app.use('api/', productRoutes)
+// app.use('/api', productRoutes)
 
 
 // Seyram Uncomment line 31 after error handler is implemented
-//app.use(errorHandler);
+// app.use(errorHandler);
 
 const PORT = process.env.PORT;
 app.listen(PORT, () => {
