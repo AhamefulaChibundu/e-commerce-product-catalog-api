@@ -66,10 +66,22 @@ const updateProduct = async (req, res, next) => {
 
 
 
-// Seyram Afake
+// Precious Uloh
 // Task: Implement deleteProduct()
 const deleteProduct = async (req, res, next) => {
-
+try {
+        const deleteProduct = await ProductModel.findByIdAndDelete(req.params.id);
+        if (!deletedProduct) {
+            return res.status(404).json({ message: `Product with ${req.params.id} not found` });
+        }
+        return res.status(200).json({
+            message: "Product deleted successfully",
+            data: deletedProduct
+        });
+    } catch (error) {
+        console.error(error);
+        next(error);
+    }
 };
 
 

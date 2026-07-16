@@ -24,8 +24,8 @@ router.get('/products/:id', getProductById);
 // Precious Uloh - PUT /products/:id
 router.put('/products/:id', updateProduct);
 
-
-// Seyram Afake - DELETE  /products/:id
+// Precious uloh - DELETE  /products/:id
+router.delete('/products/:id', deleteProduct);
 
 
 module.exports = router;
