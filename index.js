@@ -13,8 +13,8 @@ app.use(cors({
     origin: "*"
 }));
 
-// Seyram: Uncomment line 17 after logger middleware is implemented
-//app.use(logRequest);
+// Precious: Uncomment line 17 after logger middleware is implemented
+app.use(logRequest);
 
 connectDB();
 
@@ -27,8 +27,8 @@ connectDB();
 // app.use('/api', productRoutes)
 
 
-// Seyram Uncomment line 31 after error handler is implemented
-// app.use(errorHandler);
+// Precious Uncomment line 31 after error handler is implemented
+app.use(errorHandler);
 
 const PORT = process.env.PORT;
 app.listen(PORT, () => {
