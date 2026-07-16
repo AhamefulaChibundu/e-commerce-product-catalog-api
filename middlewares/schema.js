@@ -23,4 +23,27 @@ const productSchema = Joi.object({
     inStock: Joi.boolean().default(true)
 });
 
-module.exports = { productSchema };
+const updateProductSchema = Joi.object({
+   name: 
+     Joi.string().trim().min(2).max(100).optional(),
+     price: Joi.number().min(0).optional(),
+     description: Joi.string().trim().allow('').optional(),
+     category: Joi.string().trim().valid(
+        "Electronics",
+         "Clothing", 
+         "Home", 
+         "Books",
+         "Beauty",
+         "Phones", 
+         "Sports", 
+         "Toys",
+         "Others"
+     ).optional(),
+
+      inStock: Joi.boolean().optional()
+
+});
+
+module.exports = { productSchema, updateProductSchema };
+
+
