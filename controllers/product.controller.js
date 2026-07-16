@@ -70,7 +70,7 @@ const updateProduct = async (req, res, next) => {
 // Task: Implement deleteProduct()
 const deleteProduct = async (req, res, next) => {
 try {
-        const deleteProduct = await ProductModel.findByIdAndDelete(req.params.id);
+        const deletedProduct = await productModel.findByIdAndDelete(req.params.id);
         if (!deletedProduct) {
             return res.status(404).json({ message: `Product with ${req.params.id} not found` });
         }
